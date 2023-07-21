@@ -1,0 +1,13 @@
+<h1>Convert <%= @source %></h1>
+
+<p>Go <a href="/">back</a>.</p>
+
+<ul>
+<% @targets.each do |target| %>
+      <li>
+        <a href="/<%= @source %>/<%= target %>">
+          Convert 1 <%= @source %> to <%= target %>...
+        </a>
+      </li>
+  <% end %>
+</ul>
