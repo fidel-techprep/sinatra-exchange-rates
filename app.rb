@@ -8,7 +8,8 @@ symbols = JSON.parse(HTTP.get('https://api.exchangerate.host/symbols').to_s)["sy
 
 #Routes
 get("/") do
-  @symbols = symbols
+  
+  @symbols = JSON.parse(HTTP.get('https://api.exchangerate.host/symbols').to_s)["symbols"].keys
   erb(:home)
 end
 
